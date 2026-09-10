@@ -1,24 +1,44 @@
-# Bodol landing
+# Bodol Landing
 
-মাল্টি-পেজ মার্কেটিং সাইট — raw HTML + Tailwind (CDN) + GSAP। কপি কথ্য বাংলায়।
+Marketing site for [Bodol](https://app.bodol.com) — a marketplace for buying and selling Facebook pages, YouTube channels, and Telegram groups. Static multi-page site in colloquial Bangla.
 
-## পেজ
+**Stack:** HTML · Tailwind CSS (CDN) · GSAP · vanilla JS
 
-| পেজ | ফাইল |
-|------|------|
-| হোম | `index.html` |
-| আমাদের কথা | `about.html` |
-| টিম | `team.html` |
-| লিস্টিং | `listings.html` |
-| প্রশ্নোত্তর | `faq.html` |
-| সাপোর্ট | `support.html` |
-| লিগ্যাল / টার্মস / প্রাইভেসি / ডিসপিউট | `legal.html`, `terms.html`, `privacy.html`, `dispute.html` |
-
-**শুরু করুন** বাটনগুলো `https://app.bodol.com` খোলে — বদলাতে `js/site.js`।
-
-## প্রিভিউ
+## Preview
 
 ```bash
 npx --yes serve .
 ```
-# landing
+
+Then open the URL shown in the terminal (usually `http://localhost:3000`).
+
+## Pages
+
+| Page | File |
+|------|------|
+| Home | `index.html` |
+| About | `about.html` |
+| Team | `team.html` |
+| Listings | `listings.html` |
+| FAQ | `faq.html` |
+| Support | `support.html` |
+| Legal | `legal.html` |
+| Terms | `terms.html` |
+| Privacy | `privacy.html` |
+| Dispute | `dispute.html` |
+
+## Project structure
+
+```
+├── index.html          # Home
+├── about.html …        # Other pages
+├── css/site.css        # Shared styles
+├── js/
+│   ├── site.js         # Nav, app links, GSAP scroll animations
+│   └── hero-scene.js   # Home hero visuals
+└── assets/             # Icons, favicon, images
+```
+
+## App links
+
+“লগ ইন” and “শুরু করুন” point to `https://app.bodol.com`. Change the URL in `js/site.js` (`appUrl`).
