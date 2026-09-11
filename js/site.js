@@ -3,7 +3,8 @@
 
   document.querySelectorAll("[data-app-link]").forEach((el) => {
     if (el instanceof HTMLAnchorElement) {
-      el.href = appUrl;
+      const path = el.getAttribute("data-app-link") || "";
+      el.href = new URL(path, appUrl).href;
       el.target = "_blank";
       el.rel = "noopener noreferrer";
     }
