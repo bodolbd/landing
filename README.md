@@ -19,10 +19,7 @@ Then open the URL shown in the terminal (usually `http://localhost:3000`).
 | Home | `index.html` |
 | About | `about.html` |
 | Team | `team.html` |
-| Listings | `listings.html` |
 | FAQ | `faq.html` |
-| Support | `support.html` |
-| Legal | `legal.html` |
 | Terms | `terms.html` |
 | Privacy | `privacy.html` |
 | Dispute | `dispute.html` |
@@ -35,7 +32,9 @@ Then open the URL shown in the terminal (usually `http://localhost:3000`).
 ├── css/site.css        # Shared styles
 ├── js/
 │   ├── site.js         # Nav, app links, GSAP scroll animations
-│   └── hero-scene.js   # Home hero visuals
+│   ├── hero-scene.js   # Home hero visuals
+│   ├── faq.js          # FAQ content
+│   └── team.js         # Team roster
 └── assets/             # Icons, favicon, images
 ```
 

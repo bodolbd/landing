@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>টিম — Bodol</title>
-    <meta name="description" content="Bodol-এর পেছনের মানুষগুলো।" />
+    <meta name="description" content="Bodol-এর পেছনের মানুষগুলো — নাম, ছবি, যোগাযোগ।" />
     <link rel="icon" href="assets/favicon.ico" />
     <link rel="apple-touch-icon" href="assets/bodol-icon.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -22,76 +27,78 @@
   </head>
   <body class="stage relative overflow-x-hidden font-sans antialiased">
     <div class="grain" aria-hidden="true"></div>
+
     <header class="site-header" data-site-header>
       <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 md:px-8">
-        <a href="index.html" class="flex items-center gap-3"><img src="assets/bodol-icon.png" alt="" class="size-9" /><span class="text-lg font-bold text-white">Bodol</span></a>
-        <nav class="hidden items-center gap-7 lg:flex">
-          <a href="index.html" class="nav-link text-sm">হোম</a>
-          <a href="about.html" class="nav-link text-sm">আমাদের কথা</a>
-          <a href="team.html" class="nav-link text-sm" aria-current="page">টিম</a>
-          <a href="support.html" class="nav-link text-sm">সাপোর্ট</a>
+        <a href="index.html" class="flex items-center gap-3" aria-label="Bodol হোম">
+          <img src="assets/bodol-icon.png" alt="" class="size-9" width="36" height="36" />
+          <span class="text-lg font-bold tracking-tight text-white">Bodol</span>
+        </a>
+        <nav class="hidden items-center gap-7 lg:flex" aria-label="মেইন মেনু">
+          <a href="index.html" class="nav-link text-sm font-medium">হোম</a>
+          <a href="about.html" class="nav-link text-sm font-medium">আমাদের কথা</a>
+          <a href="team.html" class="nav-link text-sm font-medium" aria-current="page">টিম</a>
+          <a href="faq.html" class="nav-link text-sm font-medium">প্রশ্নোত্তর</a>
         </nav>
-        <a data-app-link class="btn-primary hidden h-10 px-4 text-sm md:inline-flex">শুরু করুন</a>
-        <button type="button" class="size-10 rounded-xl border border-white/15 lg:hidden" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="মেনু">☰</button>
+        <div class="hidden items-center gap-3 md:flex">
+          <a data-app-link class="btn-primary h-10 px-4 text-sm">শুরু করুন</a>
+        </div>
+        <button
+          type="button"
+          class="inline-flex size-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-white lg:hidden"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          aria-label="মেনু খুলুন"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
       </div>
-      <div id="mobile-nav" class="hidden border-t border-white/10 px-5 py-4 lg:hidden" data-nav-panel>
-        <nav class="flex flex-col gap-3 text-sm">
-          <a href="about.html">আমাদের কথা</a><a href="team.html">টিম</a><a href="support.html">সাপোর্ট</a>
+      <div id="mobile-nav" class="hidden border-t border-white/10 bg-black/95 px-5 py-4 lg:hidden" data-nav-panel>
+        <nav class="flex flex-col gap-4" aria-label="মোবাইল মেনু">
+          <a href="index.html" class="text-sm text-white/70">হোম</a>
+          <a href="about.html" class="text-sm text-white/70">আমাদের কথা</a>
+          <a href="team.html" class="text-sm text-white">টিম</a>
+          <a href="faq.html" class="text-sm text-white/70">প্রশ্নোত্তর</a>
+          <a data-app-link class="btn-primary mt-2 w-full">শুরু করুন</a>
         </nav>
       </div>
     </header>
 
-    <main class="relative mx-auto max-w-6xl px-5 py-14 md:px-8 md:py-20">
-      <p class="section-label">টিম</p>
-      <h1 class="mt-3 text-3xl font-bold text-white md:text-5xl">যারা Bodol চালায়</h1>
-      <p class="mt-4 max-w-2xl text-lg text-white/60">নামহীন “আমরা trusted” এর চেয়ে আসল মানুষ দেখানো বেশি কাজ করে। নিচের প্রোফাইলগুলো এখন ডামি — পরে আসল নাম-ছবি বসাবেন।</p>
+    <main class="relative">
+      <section class="team-hero relative overflow-hidden border-b border-white/10">
+        <div class="team-hero-glow" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-6xl px-5 pb-14 pt-14 md:px-8 md:pb-20 md:pt-20">
+          <p class="section-label">টিম</p>
+          <h1 class="mt-3 max-w-3xl text-3xl font-bold tracking-tight text-white md:text-5xl md:leading-[1.1]">
+            যারা Bodol চালায়
+          </h1>
+          <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/60">
+            নামহীন “আমরা trusted” এর চেয়ে আসল মানুষ দেখানো বেশি কাজ করে — ছবি, ভূমিকা, আর সরাসরি যোগাযোগ।
+          </p>
+        </div>
+      </section>
 
-      <ul class="mt-12 divide-y divide-white/10 border-y border-white/10">
-        <li class="flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:gap-8">
-          <div class="flex size-16 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-lg font-bold">SR</div>
-          <div>
-            <h2 class="text-lg font-semibold text-white">সিয়াম রহমান</h2>
-            <p class="text-sm text-white/50">ফাউন্ডার ও প্রোডাক্ট</p>
-            <p class="mt-2 max-w-xl text-sm text-white/55">প্রোডাক্ট ডিরেকশন, মার্কেটপ্লেস এক্সপেরিয়েন্স — শুরু থেকে শেষ পর্যন্ত ট্রানজেকশন কেমন লাগে।</p>
-          </div>
-        </li>
-        <li class="flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:gap-8">
-          <div class="flex size-16 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-lg font-bold">NA</div>
-          <div>
-            <h2 class="text-lg font-semibold text-white">নাদিয়া আহমেদ</h2>
-            <p class="text-sm text-white/50">অপারেশনস</p>
-            <p class="mt-2 max-w-xl text-sm text-white/55">সেলার অনবোর্ডিং, কিউ, আর দৈনন্দিন বায়ার-সেলার সাপোর্ট কোঅর্ডিনেশন।</p>
-          </div>
-        </li>
-        <li class="flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:gap-8">
-          <div class="flex size-16 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-lg font-bold">RK</div>
-          <div>
-            <h2 class="text-lg font-semibold text-white">রাফি খান</h2>
-            <p class="text-sm text-white/50">ইঞ্জিনিয়ারিং</p>
-            <p class="mt-2 max-w-xl text-sm text-white/55">অ্যাপ, মেসেজিং, আর যে সিস্টেমগুলো অর্ডার স্ট্যাটাস ও পেমেন্ট নির্ভরযোগ্য রাখে।</p>
-          </div>
-        </li>
-        <li class="flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:gap-8">
-          <div class="flex size-16 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-lg font-bold">MI</div>
-          <div>
-            <h2 class="text-lg font-semibold text-white">মায়া ইসলাম</h2>
-            <p class="text-sm text-white/50">ট্রাস্ট অ্যান্ড সেফটি</p>
-            <p class="mt-2 max-w-xl text-sm text-white/55">লিস্টিং রিভিউ আর ডিসপিউট কোঅর্ডিনেশন — যাতে এক্সপেক্টেশন পরিষ্কার থাকে।</p>
-          </div>
-        </li>
-      </ul>
-
-      <p class="mt-8 text-sm text-white/40">এখন ডামি টিম। যোগাযোগ: <a href="mailto:hello@bodol.com" class="link-quiet">hello@bodol.com</a></p>
+      <section class="relative mx-auto max-w-6xl px-5 py-10 md:px-8 md:py-16">
+        <ul class="team-roster" data-team-list></ul>
+      </section>
     </main>
 
-    <footer class="border-t border-white/10 px-5 py-8 text-sm text-white/45">
-      <div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-4 md:px-3">
+    <footer class="border-t border-white/10 px-5 py-10 text-sm text-white/45">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 md:px-3">
         <span>© <span data-year>2026</span> Bodol</span>
-        <a href="about.html" class="hover:text-white">আমাদের কথা</a>
+        <div class="flex flex-wrap gap-5">
+          <a href="about.html" class="hover:text-white">আমাদের কথা</a>
+          <a href="mailto:support@bodol.com" class="hover:text-white">সাপোর্ট</a>
+        </div>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="js/team.js"></script>
     <script src="js/site.js"></script>
   </body>
 </html>

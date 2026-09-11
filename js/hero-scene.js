@@ -4,20 +4,20 @@
 import * as THREE from "three";
 
 const STEPS = [
-  { label: "বায়ার অর্ডার করল", color: "#38bdf8" },
-  { label: "সেলার ক্রেডেনশিয়াল দিল", color: "#818cf8" },
-  { label: "বায়ার লগ ইন করল", color: "#a78bfa" },
-  { label: "বায়ার কমপ্লিট মার্ক করল", color: "#34d399" },
-  { label: "সেলার কমপ্লিট মার্ক করল", color: "#2dd4bf" },
-  { label: "অ্যাডমিন কমপ্লিট মার্ক করল", color: "#22d3ee" },
-  { label: "সেলার টাকা পেল", color: "#fbbf24" },
-  { label: "সেলার উইথড্র করল", color: "#fb923c" },
-  { label: "সেলারের কাছে টাকা এল", color: "#f472b6" },
+  { label: "Buyer অর্ডার করল", color: "#38bdf8" },
+  { label: "সেলার Credential দিল", color: "#818cf8" },
+  { label: "Buyer লগ ইন করল", color: "#a78bfa" },
+  { label: "Buyer কমপ্লিট Mark করল", color: "#34d399" },
+  { label: "Seller কমপ্লিট Mark করল", color: "#2dd4bf" },
+  { label: "অ্যাডমিন কমপ্লিট Mark করল", color: "#22d3ee" },
+  { label: "Seller টাকা পেল", color: "#fbbf24" },
+  { label: "Seller উইথড্র করল", color: "#fb923c" },
+  { label: "Seller কাছে টাকা এল", color: "#f472b6" },
   { label: "অর্ডার কমপ্লিট", color: "#4ade80" },
   { label: "৫-স্টার রেটিং", color: "#facc15" },
 ];
 
-const bnNums = ["১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯", "১০", "১১"];
+const bnNums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"];
 
 function hexToRgb(hex) {
   const h = hex.replace("#", "");
@@ -412,7 +412,7 @@ function initHeroScene() {
     applyCaptionColor(activeColor);
 
     if (labelEl) labelEl.textContent = STEPS[step].label;
-    if (numEl) numEl.textContent = `${bnNums[step]} / ১১`;
+    if (numEl) numEl.textContent = `${bnNums[step]} / 11`;
   }
 
   setStep(reduced ? count - 1 : 0);
