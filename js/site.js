@@ -1,5 +1,5 @@
 (() => {
-  const appUrl = "https://app.bodol.com";
+  const appUrl = "https://app.bodolbd.com/";
 
   document.querySelectorAll("[data-app-link]").forEach((el) => {
     if (el instanceof HTMLAnchorElement) {

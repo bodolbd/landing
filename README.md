@@ -1,6 +1,6 @@
 # Bodol Landing
 
-Marketing site for [Bodol](https://app.bodol.com) — a marketplace for buying and selling Facebook pages, YouTube channels, and Telegram groups. Static multi-page site in colloquial Bangla.
+Marketing site for [Bodol](https://app.bodolbd.com/) — a marketplace for buying and selling Facebook pages, YouTube channels, and Telegram groups. Static multi-page site in colloquial Bangla.
 
 **Stack:** HTML · Tailwind CSS (CDN) · GSAP · vanilla JS
 
@@ -40,4 +40,4 @@ Then open the URL shown in the terminal (usually `http://localhost:3000`).
 
 ## App links
 
-“লগ ইন” and “শুরু করুন” point to `https://app.bodol.com`. Change the URL in `js/site.js` (`appUrl`).
+“লগ ইন” and “শুরু করুন” point to `https://app.bodolbd.com/`. Change the URL in `js/site.js` (`appUrl`).
